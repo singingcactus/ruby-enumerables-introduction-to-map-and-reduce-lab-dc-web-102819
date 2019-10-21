@@ -39,8 +39,12 @@ end
 
 
 def reduce_to_total(source_array,starting_point)
-  reduction = starting_point
-
+  if starting_point.class == int
+    reduction = starting_point
+  else
+    reduction = 0
+  end
+  
   i = 0
   while i < source_array.length do
     reduction += source_array[i]
