@@ -39,7 +39,7 @@ end
 
 
 def reduce_to_total(source_array,starting_point)
-  if starting_point.is_an_int
+  if starting_point.class == fixnum
     reduction = starting_point
   else
     reduction = 0
